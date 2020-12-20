@@ -14,7 +14,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
-STATIC_DIR = Path.joinpath(BASE_DIR, 'media')
+STATIC_DIR = Path.joinpath(BASE_DIR, 'static')
 TEMPLATE_DIR = Path.joinpath(BASE_DIR, 'template')
 
 
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -122,7 +123,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    STATIC_DIR
+    Path.joinpath(BASE_DIR, 'static')
 ]
 
 # Media files

@@ -1,0 +1,34 @@
+{% extends "accounts/base.html" %}
+{% load bootstrap4 %}
+
+{% block context %}
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-6">
+                    {% bootstrap_field form.first_name %}
+                </div>
+                <div class="col-md-6">
+                    {% bootstrap_field form.last_name %}
+                </div>
+            </div>
+            {% bootstrap_field form.username %}
+            {% bootstrap_field form.email %}
+            <div class="row">
+                <div class="col-md-6">
+                    {% bootstrap_field form.password1 %}
+                </div>
+                <div class="col-md-6">
+                    {% bootstrap_field form.password2 %}
+                </div>
+
+            </div>
+            
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-outline-warning">Cadastrar</button>
+            </div>
+    
+        </form>
+    </div>
+{% endblock context %}

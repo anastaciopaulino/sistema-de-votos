@@ -1,0 +1,20 @@
+/***************
+***************
+************** By: Anastácio Paulino
+**************
+***************
+****************
+*/
+/* Geral
+----------------*/
+html, body, #container {
+    height: 100%;
+}
+
+body {
+    background: url(../image/wp2285582.jpg) 100% center;
+}
+
+#container .card, #container .card-body {
+    background: rgba(255, 255, 255, 0.815);
+}
