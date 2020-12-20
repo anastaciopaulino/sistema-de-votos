@@ -1,0 +1,33 @@
+/***************
+***************
+************** By: Anastácio Paulino
+**************
+***************
+****************
+*/
+/* Geral
+----------------*/
+html, body, #container {
+    height: 100%;
+}
+
+body {
+    background: rgb(53, 49, 255);
+}
+
+#container .card, #container .card-body {
+}
+
+#container #partido_favicon {
+    border-radius: 10px;
+}
+#container #partido-slogan {
+    padding: 1em;
+    background: rgba(134, 133, 133, 0.603);
+    border-radius: 10px;
+    display: block;
+}
+
+#container #partido-nome span {
+    font-size: .4em;
+}
