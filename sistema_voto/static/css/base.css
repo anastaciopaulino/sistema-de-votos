@@ -7,15 +7,8 @@
 */
 /* Geral
 ----------------*/
-html, body, #container {
-    height: 100%;
-}
-
 body {
     background: rgb(53, 49, 255);
-}
-
-#container .card, #container .card-body {
 }
 
 #container #partido_favicon {
@@ -23,7 +16,7 @@ body {
 }
 #container #partido-slogan {
     padding: 1em;
-    background: rgba(134, 133, 133, 0.603);
+    background: rgba(194, 194, 194, 0.432);
     border-radius: 10px;
     display: block;
 }

@@ -16,30 +16,34 @@
   </head>
   <body>
 
-    <section class="d-flex" id="container">
-        <div class="container align-self-center">
+    <section id="container" class="mb-5">
+        <div class="container">
+          <div class="text-center border-bottom mb-3 mt-5">
+            <h2>Vote no seu partido:</h2>
+          </div>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                      <div class="card-body">
-                        <div class="d-flex justify-content-center pb-2 border-bottom">
-                          <img src="{% static 'image/1200px-Flag_of_UNITA.svg.png' %}" id="partido_favicon" width="100" height="100">
-                        </div>
-                        <div>
-                          <h3 id="partido-nome" class="text-center">UNITA <span class="badge bg-primary">100%</span></h3>
-                          <span id="partido-slogan">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Alias explicabo atque dicta dolorum eos qui eaque aut soluta corrupti.
-                          </span>
-                        </div>  
+              {% for partido in partidos %}
+                <div class="col-md-4 mb-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-center pb-2 border-bottom">
+                        <img src="{{ partido.favicon.url }}" id="partido_favicon" width="100" height="100">
                       </div>
-                      <div class="card-footer">
-                        <div class="d-grid gap-2">
-                          <button class="btn btn-outline-warning">Votar</button>
-                        </div>
+                      <div>
+                        <h3 id="partido-nome" class="text-center">{{ partido.name }} <span class="badge bg-primary">100%</span></h3>
+                        <span id="partido-slogan">
+                          {{ partido.slogan }}
+                        </span>
+                      </div>  
+                    </div>
+                    <div class="card-footer">
+                      <div class="d-grid gap-2">
+                        <button class="btn btn-outline-warning">Votar</button>
                       </div>
-                    </div>        
+                    </div>
+                  </div>        
                 </div>
+              {% endfor %}
             </div>
         </div>
     </section>

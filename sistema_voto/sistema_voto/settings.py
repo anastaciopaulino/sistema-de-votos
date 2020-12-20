@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts',
     'bootstrap4',
+    'partidos'
 ]
 
 MIDDLEWARE = [
@@ -128,7 +129,7 @@ STATICFILES_DIRS = [
 
 # Media files
 MEDIA_URL = '/media/'
-MEDIA_DIR = Path.joinpath(BASE_DIR, 'media')
+MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media')
 
 # Authenticated user
 LOGIN_REDIRECT = 'index'
